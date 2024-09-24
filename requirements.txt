@@ -1,0 +1,6 @@
+bufr2geojson==0.6.0
+jupyter==1.0.0
+ipyleaflet
+eccodes==1.7.1
+pymetdecoder-wmo==0.1.14
+jsonschema
