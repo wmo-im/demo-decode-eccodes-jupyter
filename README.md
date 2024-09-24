@@ -1,7 +1,6 @@
-# metview-jupyter
+# decode-bufr-jupyter
 
-
-The repository contains the docker and docker-compose files to run a jupyter-server with the [metview](https://metview.readthedocs.io/) package from ECMWF installed.
+This repository contains the docker and docker-compose files to run a jupyter-server that has tools to decode and display data encode in bufr.
 
 ## configuration
 
