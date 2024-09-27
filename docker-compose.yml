@@ -2,7 +2,7 @@ version: "3"
 
 services:
   jupyter:
-    container_name: metview-jupyter
+    container_name: decode-bufr-jupyter
     build:
       context: .
     ports:

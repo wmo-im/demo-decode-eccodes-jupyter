@@ -4,3 +4,7 @@ ipyleaflet
 eccodes==1.7.1
 pymetdecoder-wmo==0.1.14
 jsonschema
+matplotlib
+numpy
+shapely
+cartopy
