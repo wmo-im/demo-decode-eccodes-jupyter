@@ -31,4 +31,4 @@ WORKDIR /root
 COPY requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
 
-ENTRYPOINT ["jupyter", "notebook","--ip=0.0.0.0","--allow-root","--no-browser","--log-level=30","--ZMQChannelsWebsocketConnection.iopub_data_rate_limit=10000000.0","--ZMQChannelsWebsocketConnection.rate_limit_window=30.0"]
+ENTRYPOINT ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--log-level=30", "--ZMQChannelsWebsocketConnection.iopub_data_rate_limit=10000000.0", "--ZMQChannelsWebsocketConnection.rate_limit_window=30.0", "--NotebookApp.default_url=/tree", "--NotebookApp.terminals_enabled=False", "--NotebookApp.file_to_run=''", "--ContentsManager.allow_hidden=False", "--FileContentsManager.hidden_files=[]"]
