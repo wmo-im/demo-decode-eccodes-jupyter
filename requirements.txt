@@ -1,10 +1,10 @@
 bufr2geojson==0.6.0
-jupyter==1.0.0
-ipyleaflet
+notebook==7.2.2
+jupyter-server==2.14.2
 eccodes==1.7.1
 pymetdecoder-wmo==0.1.14
-jsonschema
-matplotlib
-numpy
-shapely
-cartopy
+jsonschema==4.23.0
+matplotlib==3.9.2
+numpy==2.1.1
+shapely==2.0.6
+cartopy==0.23.0

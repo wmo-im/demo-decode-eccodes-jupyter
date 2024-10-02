@@ -24,6 +24,9 @@ EXPOSE 8888
 
 RUN apt-get update && apt-get install ca-certificates libudunits2-dev libgdal-dev python3 python3-pip -y && update-ca-certificates
 
+# reduce image size by removing apt cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
 USER root
 
 WORKDIR /root
@@ -34,4 +37,4 @@ RUN pip3 install -r /tmp/requirements.txt
 COPY sample-data /root/sample-data
 COPY example-notebooks /root/example-notebooks
 
-ENTRYPOINT ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--log-level=30", "--ZMQChannelsWebsocketConnection.iopub_data_rate_limit=10000000.0", "--ZMQChannelsWebsocketConnection.rate_limit_window=30.0", "--NotebookApp.default_url=/notebooks/example-notebooks/tropical_cyclone_track.ipynb", "--ServerApp.terminals_enabled=False", "--ContentsManager.allow_hidden=False", "--NotebookApp.nbserver_extensions={}"]
+ENTRYPOINT ["jupyter", "notebook", "--ip=0.0.0.0", "--allow-root", "--no-browser", "--log-level=30", "--ZMQChannelsWebsocketConnection.iopub_data_rate_limit=10000000.0", "--ZMQChannelsWebsocketConnection.rate_limit_window=30.0", "--ServerApp.default_url=/notebooks/example-notebooks/tropical_cyclone_track.ipynb", "--ServerApp.terminals_enabled=False", "--ContentsManager.allow_hidden=False"]
