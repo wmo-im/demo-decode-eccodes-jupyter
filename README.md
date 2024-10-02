@@ -10,15 +10,15 @@ You need to set a token for the jupyter server. You can do this by setting the `
 JUPYTER_TOKEN=<your token>
 ```
 
-## Run the server
+## Run the server using docker compose
 
-1. Install docker and docker-compose
+1. Install docker and docker compose
 2. Clone this repository
 3. Create a .env file defining `JUPYTER_TOKEN` (see above)
-4. Run `docker-compose up --build` from the directory where you cloned the repository
+4. Run `docker compose up -d --build` from the directory where you cloned the repository
 
-## Usage
+### Usage
 
-1. Open a browser and go to `http://localhost:8888`
+1. Open a browser and go to `http://localhost`
 2. Enter the token you set in the configuration
 3. Browse to notebooks and open them

@@ -6,9 +6,8 @@ services:
     build:
       context: .
     ports:
-      - 8888:8888
+      - 80:8888
     environment:
       JUPYTER_TOKEN: ${JUPYTER_TOKEN}
     volumes:
       - ./notebooks:/root/notebooks:rw
-      - ./sample-data:/root/sample-data:ro
