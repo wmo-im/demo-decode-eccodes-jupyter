@@ -1,6 +1,6 @@
-# decode-bufr-jupyter
+# demo-decode-eccodes-jupyter
 
-This repository contains the docker and docker-compose files to run a jupyter-server that has tools to decode and display data encode in bufr.
+This repository provides docker and docker-compose files to run a jupyter-server that includes eccodes to demonstrate how to decode data in WMO standard binary formats.
 
 ## configuration
 
