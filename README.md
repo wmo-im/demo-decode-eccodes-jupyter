@@ -19,6 +19,6 @@ JUPYTER_TOKEN=<your token>
 
 ### Usage
 
-1. Open a browser and go to `http://localhost`
+1. Open a browser and go to `http://localhost:8088` (or the port you mapped in the docker-compose file)
 2. Enter the token you set in the configuration
 3. Browse to notebooks and open them

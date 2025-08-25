@@ -1,12 +1,10 @@
-version: "3"
-
 services:
   jupyter:
-    container_name: decode-bufr-jupyter
+    container_name: demo-decode-eccodes-jupyter
     build:
       context: .
     ports:
-      - 80:8888
+      - 8088:8888
     environment:
       JUPYTER_TOKEN: ${JUPYTER_TOKEN}
     volumes:
