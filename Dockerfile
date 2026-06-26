@@ -22,7 +22,7 @@ FROM wmoim/dim_eccodes_baseimage:jammy-2.36.0
 
 EXPOSE 8888
 
-RUN apt-get update && apt-get install ca-certificates libudunits2-dev libgdal-dev python3 python3-pip -y && update-ca-certificates
+RUN apt-get update && apt-get install ca-certificates libudunits2-dev libgdal-dev python3 python3-pip wget -y && update-ca-certificates
 
 # reduce image size by removing apt cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -33,6 +33,8 @@ WORKDIR /root
 
 COPY requirements.txt /tmp/requirements.txt
 RUN pip3 install -r /tmp/requirements.txt
+
+RUN python3 -m pip install earthkit-data[all] earthkit-plots
 
 COPY sample-data /root/sample-data
 COPY example-notebooks /root/example-notebooks
